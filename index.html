@@ -1,0 +1,123 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="./messageImage_1706625793652.jpg" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>ถึงพี่พี</title>
+</head>
+<body>
+    <div class="backdrop" id="backdrop"></div>
+
+    <div style="position: absolute; z-index: -1;">
+        <div class="video-container2">
+            <video autoplay muted loop id="myVideo2">
+                <source src="./IMG_9844.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-container">
+            <video autoplay muted loop id="myVideo">
+                <source src="./IMG_9844.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="tw">
+        <h1>#22 ♥</h1>
+    </div>
+
+
+    <div class="mail-container closed" onclick="toggleMail(this)">
+        <div class="mail-header">
+          <strong>จดหมายจากน้องมิ้ง</strong>
+          <i class="fas fa-envelope-open">v</i>
+        </div>
+        <div class="mail-content">
+          <p>ถึง พี่พี</p>
+          <div class="video-container-mail">
+              <video autoplay muted loop id="myVideo-mail">
+                  <source src="./728312962.751479.mp4" type="video/mp4">
+              </video>
+          </div>
+          <p>
+            น้องขอให้พี่มีความสุขนับตั้งแต่นี้และต่อจากนี้​ ขอให้พี่ติดคณะกับมหาลัยที่อยาก​เข้า เหลือเงินใช้ซื้อของกินทุกเดือน ขอให้พี่มีชีวิตมหาลัยที่ดี ไม่เครียดมาก ชิวๆ
+        </p>
+        </div>
+      </div>
+
+
+
+
+      <div class="mail-container closed" onclick="toggleMail(this)">
+        <div class="mail-header">
+          <strong>จดหมายจากน้องฟีฟ่า</strong>
+          <i class="fas fa-envelope-open">v</i>
+        </div>
+        <div class="mail-content">
+          <p>ถึง พี่พีเด่กม6ที่กำลังจะไม่ใช่ม6</p>
+          <div class="video-container-mail">
+            <img src="./messageImage_1706625793652.jpg" style="  border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);"   alt="">
+          </div>
+          <p style="margin: -20px 0 0 0; font-size: 0.8rem;">
+            ก่อนอื่นผมก้ขอบคุณพี่สำหรับอะไรหลายๆอย่าง ตั้งแต่พี่กับพี่ค้อปตอนรับผมเข้าสาย22ในตระกูลSPที่นี่ อบอุ่นมากๆ พี่เป็นพี่ที่โคตรดีขอบคุณทุกความสุข ทุกๆอย่างตลอด 2 ปี ในรรนี้
+            หลังจากนี้ก็คงไม่ได้ไปป่วนห้องพี่ละแม่งเอ้ย ขอให้พี่ได้เข้ารั้วสีที่อยากเข้านะครับ ขอให้มีความสุขกับเส้นทางที่จะไปต่อหลังจากนี้ รักษาสุขภาพ ผมกับมิ้งก็เป็นแค่ส่วนหนึ่งในช่วงชีวิตม.ปลายพี่ ขอให้พี่ได้เจอสังคมที่ดี คนที่จริงใจ  แล้วก็อย่าลืมน้องๆที่เคยมาป่วนห้องนะพี่
+        </p>
+        </div>
+      </div>
+      <div class="next" style="text-align: center;">
+            <p style="color: rgb(171, 171, 171);">อ่านจดหมายก่อนนนนน ค่อยกดต่อไป</p>
+        <a href="./index2.html">
+            <button type="button" class="btn btn-dark">ต่อไป</button>
+
+        </a>
+      </div>
+
+      <script>
+        
+        function toggleMail(mailContainer) {
+            const allMailContainers = document.querySelectorAll('.mail-container');
+            const backdrop = document.getElementById('backdrop');
+            const next = document.getElementsByClassName("next")[0];
+            let openedMailExists = false;
+            
+            allMailContainers.forEach(container => {
+                if (container !== mailContainer && container.classList.contains('opened')) {
+                    container.classList.remove('opened');
+                    container.classList.add('closed');
+                    openedMailExists = true;
+                }
+            });
+    
+            mailContainer.classList.toggle('opened');
+            mailContainer.classList.toggle('closed');
+    
+            backdrop.style.display = openedMailExists ? 'block' : 'none';
+
+        
+            
+            
+
+
+
+            
+
+
+
+
+        }
+    </script>
+    
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
